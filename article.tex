@@ -1,0 +1,27 @@
+\documentclass{article}
+%incude hyperlinks package (\url{})
+\usepackage{hyperref}
+%use sans-serif font-family
+\renewcommand\familydefault{\sfdefault}
+%title and author for inclusion in 'maketitle'
+\title{Some Document}
+\author{Aaron Moore}
+%blank date format removes date from the made title
+\date{}
+\begin{document}
+%form title at document start
+\maketitle
+\section{First Section}
+Citation \cite{itemid}
+
+%ask for newpage for bibliography
+\pagebreak{}
+%begin bibliography ({99} for placeholder-characters)
+\begin{thebibliography}{9}
+	%itemid is used in \cite and not published
+	\bibitem{itemid}
+		Item Information
+
+%ENDIT
+\end{thebibliography}
+\end{document}

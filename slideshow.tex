@@ -1,0 +1,53 @@
+%beamer class for slideshows
+\documentclass[]{beamer}
+%use [handout] for no animations
+%[notes=show] for notes page after each slide
+%[notes=only] to only ouput the notes pages
+
+%throws fullscreen by default in adobe
+\hypersetup{pdfpagemode={FullScreen}}
+%clean theme and colour scheme
+\usetheme{Singapore}
+\usecolortheme{dolphin}
+
+%information for title slide
+\title{Some Title}
+\subtitle{More descriptive subtitle}
+\author{Aaron Moore}
+%blank date format hides date from 'titlepage'
+\date{}
+\begin{document}
+
+%title slide
+\frame{\titlepage}
+%note (notice {} not block format)
+\note{
+	%'newline' for note management
+	Introduction\newline
+	Meaning of title
+}
+
+%above frame uses {} like note
+%but a frame block is more versatile as below
+
+\begin{frame}
+	%title at top of fram ('framesubtitle' is also valid)
+	\frametitle{First Slide}
+	%bulleted list for slide points
+	\begin{itemize}
+		%<x-y> "option" diplays point from x-y in animated sequence
+		%drop x or y to run from start/to finish respectively
+		\item<1->{First Item}
+		\item<2->{Second Item}
+		%'only<n>{}' is available for including at one progression in the animation
+	\end{itemize}
+\end{frame}
+
+%re-jig title information for title-styled outro slide
+\title{Thankyou for listening}
+\subtitle{I will now take any questions}
+\author{}
+\frame{\titlepage}
+
+%ENDIT
+\end{document}
