@@ -3,7 +3,7 @@
 %use [handout] for no animations
 %[notes=show] for notes page after each slide
 %[notes=only] to only ouput the notes pages
-
+\usepackage{graphicx}
 %throws fullscreen by default in adobe
 \hypersetup{pdfpagemode={FullScreen}}
 %clean theme and colour scheme
@@ -14,8 +14,13 @@
 \title{Some Title}
 \subtitle{More descriptive subtitle}
 \author{Aaron Moore}
+%include logo on title slide
+%\titlegraphic{\includegraphics[width=2cm]{arch-latex_logo}\hspace*{4cm}\includegraphics[width=2cm]{arch-vim_logo}}
 %blank date format hides date from 'titlepage'
 \date{}
+
+%logo for all slides
+\logo{\includegraphics[width=0.75cm]{arch-latex_logo}}
 \begin{document}
 
 %title slide
