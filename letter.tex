@@ -1,11 +1,22 @@
 \documentclass{letter}
 %include hyperlinks package (\url{})
 \usepackage{hyperref}
+%include graphics package
+\usepackage{graphicx}
+%include fancy header
+\usepackage{fancyhdr}
+%this is for formatting only & should be removed for typing
+\usepackage{lipsum}
+%set margins using geometry
+\usepackage[margin=2.5cm, a4paper]{geometry}
+\fancypagestyle{empty}{\fancyhf{}\fancyhead[L]{\includegraphics[width=1cm]{arch-latex_logo}}}
+\renewcommand\headrulewidth{0pt}
 %use sans-serif font-family
 \renewcommand\familydefault{\sfdefault}
 %name and address of signatory
 \signature{Aaron Moore}
-\address{44 Bridge Street \\ Aberystwyth \\ Ceredigion \\ SY23 1QB}
+\address{%\includegraphics[width=1.75cm]{arch-latex_logo} \\
+44 Bridge Street \\ Aberystwyth \\ Ceredigion \\ SY23 1QB}
 %after document the signatories address is included
 %followed by the date in the default format
 \begin{document}
@@ -14,6 +25,7 @@
 %opening allows for proper indentation
 \opening{Dear Adressee,}
 I am writing a letter
+\lipsum[1-10]
 %closing includes the signature
 \closing{Yours faithfully}
 %ENDIT
