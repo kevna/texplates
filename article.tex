@@ -1,22 +1,38 @@
-\documentclass[a4paper]{article}
+\documentclass{article}
 %incude hyperlinks package (\url{})
 \usepackage{hyperref}
+%set margins using geometry
+\usepackage[margin=2.5cm, a4paper]{geometry}
+%include header file
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+%include graphics package
 \usepackage{graphicx}
+%include lorem ipsum for formatting (comment this out to use)
+\usepackage{lipsum}
+
+\geometry{voffset=-0.6cm}
+\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[L]{Aaron Moore} \fancyhead[C]{aam13}
+	\fancyhead[R]{\includegraphics[width=1cm]{arch-latex_logo}\hspace{0.5cm}\includegraphics[width=1cm]{arch-vim_logo}}
+	\fancyfoot[R]{\thepage\ of \pageref{LastPage}\ }
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand\footrulewidth{0.2pt}
 %use sans-serif font-family
 \renewcommand\familydefault{\sfdefault}
 %title and author for inclusion in 'maketitle'
 \title{Some Document}
 \author{Aaron Moore}
-\date{\includegraphics[width=1.25cm]{arch-latex_logo}
-\includegraphics[width=1.25cm]{arch-vim_logo}}
 %blank date format removes date from the made title
-%\date{}
+\date{}
 \begin{document}
 %form title at document start
-\maketitle
+\maketitle \thispagestyle{fancy}
 \section{First Section}
 Citation \cite{itemid}
-
+%include some of lorem ipsum (remove this)
+\lipsum[1-10]
 %ask for newpage for bibliography
 \pagebreak{}
 %begin bibliography ({99} for placeholder-characters)
