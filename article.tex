@@ -30,17 +30,18 @@
 %form title at document start
 \maketitle \thispagestyle{fancy}
 \section{First Section}
-Citation \cite{itemid}
+Citation \cite{itemid}\par
 %include some of lorem ipsum (remove this)
 \lipsum[1-10]
+
 %ask for newpage for bibliography
 \pagebreak{}
 %begin bibliography ({99} for placeholder-characters)
 \begin{thebibliography}{9}
 	%itemid is used in \cite and not published
-	\bibitem{itemid}
-		Item Information
-
+	\bibitem{itemid}\emph{Item Title} - author name\\
+		additional information, and\\
+		URI: \url{http://example.com}
 %ENDIT
 \end{thebibliography}
 \end{document}
