@@ -8,6 +8,9 @@
 \usepackage{lastpage}
 %include graphics package
 \usepackage{graphicx}
+%added the listings package for including codelisting
+\usepackage{listings}
+\lstset{breaklines=true}
 %include lorem ipsum for formatting (comment this out to use)
 \usepackage{lipsum}
 
@@ -21,6 +24,8 @@
 	\renewcommand\footrulewidth{0.2pt}
 %use sans-serif font-family
 \renewcommand\familydefault{\sfdefault}
+%turn off section numbering
+\setcounter{secnumdepth}{0}
 %title and author for inclusion in 'maketitle'
 \title{Some Document}
 \author{Aaron Moore}
