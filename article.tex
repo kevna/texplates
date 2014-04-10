@@ -19,7 +19,7 @@
 	\fancyhf{}
 	\fancyhead[L]{Aaron Moore} \fancyhead[C]{aam13}
 	\fancyhead[R]{\includegraphics[width=1cm]{arch-latex_logo}\hspace{0.5cm}\includegraphics[width=1cm]{arch-vim_logo}}
-	\fancyfoot[R]{\thepage\ of \pageref{LastPage}\ }
+	\fancyfoot[R]{\thepage\ of~\pageref{LastPage}\ }
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand\footrulewidth{0.2pt}
 %use sans-serif font-family
@@ -35,7 +35,7 @@
 %form title at document start
 \maketitle \thispagestyle{fancy}
 \section{First Section}
-Citation \cite{itemid}\par
+Citation\cite{itemid}\par
 %include some of lorem ipsum (remove this)
 \lipsum[1-10]
 
@@ -44,9 +44,9 @@ Citation \cite{itemid}\par
 %begin bibliography ({99} for placeholder-characters)
 \begin{thebibliography}{9}
 	%itemid is used in \cite and not published
-	\bibitem{itemid}\emph{Item Title} - author name\\
+	\bibitem{itemid}\emph{Item Title} --- author name\\
 		additional information, and\\
-		URI: \url{http://example.com}
+		URI:~\url{http://example.com}
 %ENDIT
 \end{thebibliography}
 \end{document}
